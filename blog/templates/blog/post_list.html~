@@ -1,5 +1,12 @@
 <html>
         <head>
+            <form action="/example/">
+                <button type="submit">ตอนนี้</button>
+            </form>
+            <form action="/example/">
+                <button type="submit">เมื่อวาน</button>
+            </form>
+
             <h4><a href="">получить отчет</a>     последнее действие :</h4>
         </head>
         <body>
