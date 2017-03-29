@@ -1,21 +1,37 @@
 <html>
         <head>
-            <h4><a href="">получить отчет</a>     последнее действие :</h4>
+        <style>
+            .b1 {
+            background: green; /* Синий цвет фона */ 
+            color: white; /* Белые буквы */ 
+            font-size: 12pt; /* Размер шрифта в пунктах */
+            }
+            .b2 {
+            background: blue; /* Синий цвет фона */ 
+            color: white; /* Белые буквы */ 
+            font-size: 12pt; /* Размер шрифта в пунктах */
+            }
+        </style>
+        <div style="float: left; margin-right: 20px">
+            <form action="/example/">
+                <button  class="b1" value="b1">    ตอนนี้    </button>
+            <form action="/example/"><button  class="b2" value="b2">เมื่อวาน</button>
+            </form>
+            </form>
+        </div>
+            <h4><a href="">รายงาน</a>     ข้อมูลล่าสุด :</h4>
         </head>
         <body>
-            <div>
-                <h3><a href="">attack</a> <a href="">attack</a> <a href="">attack</a> <a href="">attack</a> <a href="">attack</a> <a href="">attack</a> <a href="">attack</a> <a href="">attack</a></h3>
-                <p>file - buf.txt получен: 14.06.2014, 12:14</p>
-            </div>
+    <div>
+        <h1><a href="/">Django Blog</a></h1>
+    </div>
 
-            <div>
-                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            </div>
-
-            <div>
-                <h4><a href="">режим работы<br />автоматически</a></h4>
-                <h4><a href="">режим работы<br />ручной</a></h4>
-                <p>''</p>
-            </div>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
         </body>
     </html>

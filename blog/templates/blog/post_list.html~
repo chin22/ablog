@@ -1,16 +1,28 @@
 <html>
         <head>
+        <style>
+            .b1 {
+            background: green; /* Синий цвет фона */ 
+            color: white; /* Белые буквы */ 
+            font-size: 12pt; /* Размер шрифта в пунктах */
+            }
+            .b2 {
+            background: blue; /* Синий цвет фона */ 
+            color: white; /* Белые буквы */ 
+            font-size: 12pt; /* Размер шрифта в пунктах */
+            }
+        </style>
+        <div style="float: left; margin-right: 20px">
             <form action="/example/">
-                <button type="submit">ตอนนี้</button>
+                <button  class="b1" value="b1">    ตอนนี้    </button>
+            <form action="/example/"><button  class="b2" value="b2">เมื่อวาน</button>
             </form>
-            <form action="/example/">
-                <button type="submit">เมื่อวาน</button>
             </form>
-
-            <h4><a href="">получить отчет</a>     последнее действие :</h4>
+        </div>
+            <h4><a href="">รายงาน</a>     ข้อมูลล่าสุด :</h4>
         </head>
         <body>
-<div>
+    <div>
         <h1><a href="/">Django Blog</a></h1>
     </div>
 
